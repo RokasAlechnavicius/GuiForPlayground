@@ -1,0 +1,78 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<BorderPane fx:id="mainPanel" fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Playgrounds">
+                    <items>
+                        <MenuItem text="new Playground" onAction="#showAddPlayground"/>
+                        <MenuItem text="new Double Swings" onAction="#showAddDoubleSwings"/>
+                    </items>
+                </Menu>
+                <Menu text="Kids">
+                    <items>
+                        <MenuItem text="New kid" onAction="#shouldAddKid"/>
+                        <MenuItem text="Enroll kid To Queue" onAction="#shouldAddKidToQueue"/>
+                        <MenuItem text="Remove kid from queue" onAction="#shouldRemoveKidFromQueue"/>
+                        <MenuItem text="Remove kid from playground" onAction="#shouldRemoveKidFromPlayground"/>
+                    </items>
+                </Menu>
+                <Menu text="statistics">
+                    <MenuItem text="Visited today count" onAction="#shouldGetAllVisitedCount"/>
+                    <MenuItem text="Visited today" onAction="#shouldGetAllVisited"/>
+                    <MenuItem text="Kid visited today" onAction="#shouldGetAllVisitedOneKid"/>
+                    <MenuItem text="Current utilization of playsite" onAction="#shouldGetUtilization"/>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+        <center>
+            <TableView fx:id="playgroundsTable">
+                <columns>
+                    <TableColumn fx:id="playgroundID" text="Playground name" minWidth="120">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="playgroundName"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Amount of kids allowed" minWidth="175">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="amountOfKidsAllowed"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="type of playground" minWidth="120">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="typeOfPlayground"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="amount of kids playing" minWidth="175">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="amountOfKidsPlaying"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Kids playing" minWidth="250">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="kidsCurrentlyPlaying"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="In Queue" minWidth="250">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="playgroundQueue"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+
+            </TableView>
+        </center>
+</BorderPane>

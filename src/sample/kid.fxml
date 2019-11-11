@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.KidController"
+            prefHeight="400.0" prefWidth="600.0">
+    <headerText>
+        Fill in the info
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Kid name " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="kidNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Age" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="kidAgeField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="ticketNumber " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="ticketNumberField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="is vip " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <RadioButton fx:id="isVipField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>
