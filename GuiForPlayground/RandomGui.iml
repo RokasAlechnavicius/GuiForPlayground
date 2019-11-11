@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../playground/playground-library/out/artifacts/playground_library_jar/playground-library.jar!/" />
+          <root url="jar://$MODULE_DIR$/../playground-library.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
